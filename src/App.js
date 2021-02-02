@@ -1,16 +1,16 @@
-import logo from './logo.svg';
-import React, {Component} from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import { Home, Auth } from './pages';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="gray-background">
-          <img src={logo} lat="logo" />
-          <h2>Let's develop management system!</h2>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <Route exact path="/" component={Home}/>
+                <Route path="/auth" component={Auth}/>
+            </div>
+        );
+    }
 }
 
 export default App;
